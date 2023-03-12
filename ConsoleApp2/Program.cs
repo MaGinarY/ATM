@@ -25,7 +25,6 @@
             {
                 Console.WriteLine("Please, you should write a number !");
             }        
-
         }
     }
 }
