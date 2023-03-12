@@ -34,7 +34,7 @@ public static class ATM
     {
         int twoHundred = 200;
         int oneHundred = 100;
-        int fiveTeen = 50;
+        int fifty = 50;
         int twenty = 20;
         int ten = 10;
         int five = 5;
@@ -50,9 +50,9 @@ public static class ATM
             return oneHundred;
         }
 
-        if (amount % fiveTeen == 0)
+        if (amount % fifty == 0)
         {
-            return fiveTeen;
+            return fifty;
         }
 
         if (amount % twenty == 0)
