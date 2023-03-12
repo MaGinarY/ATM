@@ -30,7 +30,6 @@
     }
 }
 
-
 public static class ATM
 {
     public static int bankNoteLogic(int amount = 200)
