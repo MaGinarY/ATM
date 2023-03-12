@@ -6,6 +6,9 @@
         {
             Console.WriteLine("Please etner the amount of cash:");
             string cashString = Console.ReadLine();
+            
+            // As a extra task, if you have time. Please add the handling of incorrect input from user.
+            // If you hover mouse over method 'ToInt32' you will see what exceptions it can throw.
             int cashInt = Convert.ToInt32(cashString);
 
             while(cashInt > 0)
@@ -25,6 +28,9 @@
 
 public static class ATM
 {
+    // It is better to give meanonfull names to Methods, Classes, variables, e.t.c.
+    // So the code will be self-descriptive. It will help you to find out what is going on after long period of time,
+    // or if new person reads your code, will take less time to undestand the logic.
     public static int Asd(int amount = 200)
     {
         int twoHundred = 200;
