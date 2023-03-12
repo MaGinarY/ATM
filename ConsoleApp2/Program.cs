@@ -7,16 +7,24 @@
             Console.WriteLine("Please etner the amount of cash:");
             string cashString = Console.ReadLine();
             int cashInt = Convert.ToInt32(cashString);
-
-            while(cashInt > 0)
+            
+            try
             {
-                var bankNote = ATM.Asd(cashInt);
+                int cashInt = Convert.ToInt32(cashString);
 
-                Console.WriteLine("Here you are:" + bankNote);
+                while (cashInt > 0)
+                {
+                    var bankNote = ATM.bankNoteLogic(cashInt);
 
-                cashInt -= bankNote;
+                    Console.WriteLine("Here you are:" + bankNote);
 
+                    cashInt -= bankNote;
+                }
             }
+            catch (FormatException)
+            {
+                Console.WriteLine("Please, you should write a number !");
+            }        
 
         }
     }
@@ -25,7 +33,7 @@
 
 public static class ATM
 {
-    public static int Asd(int amount = 200)
+    public static int bankNoteLogic(int amount = 200)
     {
         int twoHundred = 200;
         int oneHundred = 100;
@@ -34,8 +42,7 @@ public static class ATM
         int ten = 10;
         int five = 5;
         int one = 1;
-
-
+        
         if(amount % twoHundred == 0)
         {
             return twoHundred;
