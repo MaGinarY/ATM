@@ -6,8 +6,7 @@
         {
             Console.WriteLine("Please etner the amount of cash:");
             string cashString = Console.ReadLine();
-            int cashInt = Convert.ToInt32(cashString);
-            
+                        
             try
             {
                 int cashInt = Convert.ToInt32(cashString);
